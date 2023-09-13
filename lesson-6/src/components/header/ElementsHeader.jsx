@@ -35,7 +35,7 @@ const ElementsHeader = ({ searching, handleSearch }) => {
   );
 };
 
-ElementsHeader.prototype = {
+ElementsHeader.propTypes = {
   searching: PropTypes.string,
   handleSearch: PropTypes.func,
 };

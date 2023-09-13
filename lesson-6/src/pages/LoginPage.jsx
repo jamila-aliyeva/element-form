@@ -3,6 +3,8 @@ import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+import "./LoginPage.scss";
+
 const LoginPage = () => {
   const [user, setUser] = useState({ username: "", password: "" });
   const navigate = useNavigate();

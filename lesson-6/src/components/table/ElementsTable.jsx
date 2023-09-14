@@ -29,8 +29,8 @@ const ElementsTable = ({ elements }) => {
           })
         ) : (
           <tr>
-            <td colSpan={6} className="text-center">
-              not found
+            <td colSpan={6} className="text-center bg-white">
+              Not found
             </td>
           </tr>
         )}

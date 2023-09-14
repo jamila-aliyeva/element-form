@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
-
-import "./LoginPage.scss";
 
 const LoginPage = () => {
   const [user, setUser] = useState({ username: "", password: "" });
@@ -13,8 +10,6 @@ const LoginPage = () => {
     e.preventDefault();
     if (user.username === "jamila" && user.password === "2006") {
       navigate("/homepage");
-    } else {
-      toast.error("Error");
     }
   };
   const handleUser = (e) => {

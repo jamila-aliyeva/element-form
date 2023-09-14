@@ -8,7 +8,7 @@ const ElementForm = ({ element, handleElement, handleSubmit, validated }) => {
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Row className="mb-3">
         <Form.Group className="my-3" controlId="name">
-          <Form.Label>name</Form.Label>
+          <Form.Label>Name</Form.Label>
           <Form.Control
             onChange={handleElement}
             value={element.name}
@@ -36,7 +36,7 @@ const ElementForm = ({ element, handleElement, handleSubmit, validated }) => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="my-3" controlId="category">
-          <Form.Label>category</Form.Label>
+          <Form.Label>Category</Form.Label>
           <Form.Select onChange={handleElement} value={element.category}>
             {category.map((el) => (
               <option key={el} value={el}>
@@ -50,7 +50,7 @@ const ElementForm = ({ element, handleElement, handleSubmit, validated }) => {
           </Form.Control.Feedback>
         </Form.Group>
         <Form.Group className="my-3" controlId="quantity">
-          <Form.Label>quantity</Form.Label>
+          <Form.Label>Quantity</Form.Label>
           <Form.Control
             onChange={handleElement}
             value={element.quantity}

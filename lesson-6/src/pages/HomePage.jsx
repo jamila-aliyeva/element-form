@@ -18,6 +18,7 @@ const HomePage = () => {
     description: "",
   }); // saving form elements
 
+  // const NameRef = useRef();
   // searching
   const [searching, setSearching] = useState("");
 
@@ -49,6 +50,7 @@ const HomePage = () => {
       event.preventDefault();
       if (form.checkValidity()) {
         let newStudents = [...elements, { ...element, id: v4() }];
+        // NameRef.current.focus();
         setelements(newStudents);
         localStorage.setItem("elements", JSON.stringify(newStudents));
         // console.log(elements);
@@ -70,6 +72,7 @@ const HomePage = () => {
       <Row>
         <Col lg={4}>
           <ElementForm
+            // ref={useRef}
             element={elements}
             handleElement={handleElement}
             handleSubmit={handleSubmit}

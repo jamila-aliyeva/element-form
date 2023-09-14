@@ -11,7 +11,7 @@ const ElementsHeader = ({ searching, handleSearch }) => {
   };
 
   const filteredCategories = category.filter((el) =>
-    el.toLowerCase().includes(selectedCategory.toLowerCase())
+    el.includes(selectedCategory)
   );
   return (
     <header>
@@ -34,7 +34,6 @@ const ElementsHeader = ({ searching, handleSearch }) => {
     </header>
   );
 };
-
 ElementsHeader.propTypes = {
   searching: PropTypes.string,
   handleSearch: PropTypes.func,

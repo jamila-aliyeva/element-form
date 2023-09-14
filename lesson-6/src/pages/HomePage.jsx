@@ -30,8 +30,8 @@ const HomePage = () => {
   const result = useMemo(
     () =>
       elements.filter((el) => {
-        // el.name.trim().toLowerCase();
-        console.log(el.name);
+        el.name.trim().toLowerCase();
+        // console.log(el.name);
       }),
     [searching, elements]
   );
@@ -81,7 +81,7 @@ const HomePage = () => {
         </Col>
         <Col lg={8}>
           <ElementsHeader searching={searching} handleSearch={handleSearch} />
-          <ElementsTable elements={result} />
+          <ElementsTable elements={elements} />
         </Col>
       </Row>
     </Container>

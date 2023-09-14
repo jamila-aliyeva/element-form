@@ -18,14 +18,16 @@ const ElementsTable = ({ elements }) => {
       <tbody>
         {elements.length ? (
           elements.map((element, i) => {
-            <tr key={element.id}>
-              <td>{i + 1}</td>
-              <td>{element.name}</td>
-              <td>{element.price}</td>
-              <td>{element.category}</td>
-              <td>{element.quantity}</td>
-              <td>{element.description}</td>
-            </tr>;
+            return (
+              <tr key={element.id}>
+                <td>{i + 1}</td>
+                <td>{element.name}</td>
+                <td>{element.price}</td>
+                <td>{element.category}</td>
+                <td>{element.quantity}</td>
+                <td>{element.description}</td>
+              </tr>
+            );
           })
         ) : (
           <tr>
@@ -42,7 +44,6 @@ const ElementsTable = ({ elements }) => {
 ElementsTable.prototype = {
   elements: PropTypes.array,
 };
-
 
 const MemoElementsTable = memo(ElementsTable);
 export default MemoElementsTable;

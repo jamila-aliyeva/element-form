@@ -73,7 +73,7 @@ const HomePage = () => {
         <Col lg={4}>
           <ElementForm
             // ref={useRef}
-            element={elements}
+            element={element}
             handleElement={handleElement}
             handleSubmit={handleSubmit}
             validated={validated}
